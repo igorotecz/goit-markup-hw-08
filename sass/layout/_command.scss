@@ -1,0 +1,77 @@
+.command {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $button-secondary;
+  justify-content: center;
+}
+.team__list {
+  display: flex;
+}
+.team__member {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: $back-color;
+}
+.team__member:not(:last-child) {
+  @extend %margin-primary;
+}
+.member-card {
+  padding: 30px 0;
+}
+.member-card__name {
+  margin-bottom: 10px;
+  color: $color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.member-card__position {
+  color: $color-text;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+/*==========SOCIAT ICON=============*/
+
+.member-card__social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.member-card__social-icon {
+  @include socnet-icon;
+
+  background-color: $back-color;
+  &:not(last-child) {
+    margin-right: 10px;
+  }
+  &:hover {
+    background-color: $second-color;
+  }
+}
+.social-net {
+  @include socnet-icon;
+
+  background-color: $back-color;
+  fill: $color-icon;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $back-color;
+    background-color: $second-color;
+  }
+}

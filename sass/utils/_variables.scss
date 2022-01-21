@@ -1,0 +1,26 @@
+$color: #212121;
+$second-color: #2196f3;
+$back-color: #ffffff;
+$color-text: #757575;
+$button-secondary: #f5f4fa;
+$color-icon: #afb1b8;
+
+%margin-primary {
+  margin-right: 30px;
+}
+
+@mixin socnet-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+@mixin fontMix($fs, $fw, $lh, $ls) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

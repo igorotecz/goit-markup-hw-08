@@ -1,0 +1,37 @@
+.clients {
+  width: 1170px;
+  height: 372px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-list__icons {
+  display: flex;
+}
+.client-list__icon {
+  width: 170px;
+  height: 92px;
+  &:not(last-child) {
+    @extend %margin-primary;
+  }
+}
+
+.client-logo {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: $color-icon;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $second-color;
+    border-color: $second-color;
+  }
+}
