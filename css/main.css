@@ -59,9 +59,24 @@ img {
 }
 
 .container {
-  width: 1200px;
+  /*width: 1200px;*/
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .header {
@@ -277,9 +292,25 @@ button.slogan-site__button {
 }
 
 .benefits-topic__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+}
+@media screen and (min-width: 480px) {
+  .benefits-topic__list {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefits-topic__list {
+    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-topic__list {
+    width: 1200px;
+  }
 }
 
 .benefits-topic__item {
@@ -331,6 +362,11 @@ button.slogan-site__button {
 .services {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+@media screen and (max-width: 767px) {
+  .services {
+    display: none;
+  }
 }
 
 .profail-title {
@@ -385,9 +421,7 @@ button.slogan-site__button {
 }
 
 .team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 .team__member {
@@ -478,7 +512,7 @@ button.slogan-site__button {
 
 .clients {
   width: 1170px;
-  height: 372px;
+  /*height: 372px;*/
   margin-left: auto;
   margin-right: auto;
   padding-top: 94px;
@@ -486,9 +520,7 @@ button.slogan-site__button {
 }
 
 .client-list__icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
 }
 
 .client-list__icon {
