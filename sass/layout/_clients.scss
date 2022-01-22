@@ -1,5 +1,5 @@
 .clients {
-  width: 1170px;
+  width: 1200px;
   /*height: 372px;*/
   margin-left: auto;
   margin-right: auto;
@@ -7,13 +7,28 @@
   padding-bottom: 94px;
 }
 .client-list__icons {
-  display: inline-block;
+  display: flex;
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-basis: calc(100% / 2);
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }
 .client-list__icon {
   width: 170px;
   height: 92px;
   &:not(last-child) {
     @extend %margin-primary;
+  }
+  @media screen and (min-width: 1200px) {
   }
 }
 

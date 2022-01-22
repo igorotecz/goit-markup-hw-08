@@ -8,7 +8,14 @@
 }
 .footer-container {
   display: flex;
-  align-items: space-align;
+  @media screen and (min-width: 480px) {
+    flex-direction: column;
+  }
+  display: flex;
+  /*align-items: space-align;*/
+}
+.footer-contact {
+  margin-left: 70px;
 }
 .page-footer__logo {
   display: block;
