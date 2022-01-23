@@ -7,7 +7,7 @@
   align-items: center;
 }
 .page-header {
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -32,6 +32,14 @@
   &:hover {
     color: $second-color;
   }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 .page-header__web {
   color: $second-color;
@@ -43,6 +51,15 @@
 
   &__menu:not(:last-child) {
     margin-right: 50px;
+  }
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    &__menu:last-child {
+      margin-right: 80px;
+    }
+    display: flex;
   }
 }
 .navigation__link {
@@ -75,17 +92,43 @@
 
     background: $second-color;
     border-radius: 2px;
+    @media screen and (min-width: 768px) {
+      margin-top: 34px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-top: 29px;
+    }
   }
 }
 
 .contact-header {
   display: flex;
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 .contact-header__item {
   fill: $color-text;
   color: $color-text;
   &:not(:last-child) {
     margin-right: 50px;
+  }
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 .contact-header__mail,

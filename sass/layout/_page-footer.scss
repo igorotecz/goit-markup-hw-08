@@ -11,15 +11,23 @@
   @media screen and (min-width: 480px) {
     flex-direction: column;
   }
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+
   /*align-items: space-align;*/
 }
 .footer-contact {
-  margin-left: 70px;
+  @media screen and (min-width: 480px) {
+    margin-left: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 .page-footer__logo {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: $back-color;
   text-decoration: none;
 
@@ -29,6 +37,13 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .page-footer__web {
@@ -43,9 +58,31 @@
   font-size: 14px;
   line-height: 1.74;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 .page-footer__contact {
   list-style: none;
+
+  @media screen and (min-width: 480px) {
+    margin-top: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
+}
+.page-footer__item {
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 .page-footer__item:not(:last-child) {
   margin-bottom: 9px;
@@ -61,7 +98,16 @@
 /*=======BLOCK_2_FOOTER============*/
 
 .footer-socnet {
-  margin-left: 70px;
+  @media screen and (min-width: 480px) {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    margin-top: 0;
+  }
 }
 .propose {
   font-size: 14px;
@@ -77,11 +123,24 @@
   text-transform: uppercase;
 
   color: $back-color;
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 .footer-socnet__icons {
   display: flex;
   width: 100%;
   height: 90px;
+
+  @media screen and (min-width: 480px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: start;
+  }
 }
 .footer-socnet__icon:nth-child(1) {
   margin-left: 0;
@@ -109,17 +168,32 @@
 
 /*=======BLOCK_3_FOOTER============*/
 .footer-mailing {
-  margin-left: 93px;
+  @media screen and (min-width: 480px) {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    margin-top: 0;
+  }
 }
 .footer-mailing__form {
   display: flex;
-  margin-top: 20px;
+
+  @media screen and (min-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 .footer-mailing__form input {
   margin-right: 12px;
   padding-left: 16px;
-
-  width: 350px;
   height: 50px;
 
   font-size: 16px;
@@ -131,6 +205,15 @@
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 350px;
+  }
 }
 
 .footer-mailing__subscribe {
@@ -149,6 +232,13 @@
   background: $second-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  @media screen and (min-width: 480px) {
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
 }
 .footer-mailing__svg {
   position: absolute;

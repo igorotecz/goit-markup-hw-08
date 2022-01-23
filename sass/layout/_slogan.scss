@@ -18,7 +18,7 @@
 
 .slogan-site__text {
   color: $back-color;
-  width: 696px;
+
   margin: 0 auto;
   margin-bottom: 30px;
 
@@ -29,6 +29,16 @@
 
   text-align: center;
   text-transform: uppercase;
+  @media screen and (min-width: 480px) {
+    @include fontMix(26px, 900, 1.61, 0.06em);
+    width: 360px;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    @include fontMix(44px, 900, 1.36, 0.06em);
+    width: 696px;
+  }
 }
 .slogan-site__button {
   display: inline-block;
