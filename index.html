@@ -17,18 +17,27 @@
         <div class="page-header container">
         <nav class="page-header__nav-bar">
             <a class="page-header__logo" href="./index.html"><span class="page-header__web">Web</span>Studio</a>
+            <button type="button" class="header-button is-open" data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-cross" href="./imagescvg2/sprite3.svg#icon-close_40px"></use>
+                    <use class="icon-menu" href="./imagescvg2/sprite3.svg#icon-menu_40px"></use>
+                </svg>
+            </button>
+        </nav>
+            <div class="header-menu">
             <ul class="navigation">
                 <li class="navigation__menu"><a href="./index.html" class="navigation__link navigation__link--accent">Студия</a></li>
                 <li class="navigation__menu"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
                 <li class="navigation__menu"><a href="./contact.html" class="navigation__link">Контакты</a></li>
             </ul>       
-        </nav>
+        
             <ul class="contact-header">
                 <li class="contact-header__item"><a class="contact-header__mail" href="mailto:info@deskstudio.com">
                 <svg class="contact-header__icon" width="16px" height="12px"><use href="./imagescvg/sprite.svg#mail"></use></svg>info@deskstudio.com</a></li>
                 <li class="contact-header__item"><a class="contact-header__tel" href="tel:+380961111111">
                 <svg class="contact-header__icon" width="10px" height="16px"><use href="./imagescvg/sprite.svg#smartphone"></use></svg>+380961111111</a></li>
             </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -304,6 +313,7 @@
 
     <footer class="page-footer">
      <div class="container footer-container"> 
+         <div class="footer-tablet">
          <div class="footer-contact">
             <a class="page-footer__logo" href="./index.html"><span class="page-footer__web">Web</span>Studio</a>
             <address class="page-footer__address">г. Киев, пр-т Леси Украинки, 26</address>
@@ -345,6 +355,7 @@
                 </li>
             </ul>
           </div>
+        </div>
             <div class="footer-mailing">
                 <h3 class="propose">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
                 <div class="footer-mailing__form">
@@ -418,6 +429,7 @@
 </div>
 
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
     
 </body>
 </html>

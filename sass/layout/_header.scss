@@ -1,6 +1,11 @@
 .header {
-  padding: 25px 0;
   border-bottom: 1px solid green;
+  @media screen and (min-width: 480px) {
+    padding: 15px 0;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 25px 0;
+  }
 }
 .page-header {
   display: flex;
@@ -12,12 +17,10 @@
   margin: 0 auto;
 }
 .page-header__nav-bar {
-  margin-right: auto;
   display: flex;
   align-items: center;
 }
 .page-header__logo {
-  margin-right: 93px;
   align-self: center;
   text-decoration: none;
 
@@ -32,7 +35,9 @@
   &:hover {
     color: $second-color;
   }
-
+  @media screen and (min-width: 480px) {
+    margin-right: 284px;
+  }
   @media screen and (min-width: 768px) {
     margin-right: 88px;
   }
@@ -43,6 +48,37 @@
 }
 .page-header__web {
   color: $second-color;
+}
+/*MENU-BUTTON-BEGIN*/
+.header-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  :focus {
+    fill: $second-color;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.header-button .icon-cross {
+  display: none;
+}
+.header-button.is-open .icon-cross {
+  display: block;
+}
+.header-button.is-open .icon-menu {
+  display: none;
+}
+
+/*MENU-BUTTON-END*/
+.header-menu {
+  display: flex;
+  flex-direction: row;
 }
 .navigation {
   display: flex;
@@ -57,9 +93,10 @@
   }
   @media screen and (min-width: 768px) {
     &__menu:last-child {
-      margin-right: 80px;
+      margin-right: 60px;
     }
     display: flex;
+    align-items: center;
   }
 }
 .navigation__link {
@@ -112,6 +149,7 @@
   }
   @media screen and (min-width: 1200px) {
     flex-direction: row;
+    margin-left: 245px;
   }
 }
 .contact-header__item {
