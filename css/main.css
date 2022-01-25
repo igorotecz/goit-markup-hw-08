@@ -1,4 +1,4 @@
-.client-list__icon:not(last-child), .team__member:not(:last-child), .profail-title__item:not(:last-child), .benefits-topic__item:not(:last-child) {
+.profail-title__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -65,7 +65,7 @@ img {
 
 .container,
 .footer-container {
-  /*width: 1200px;*/
+  width: 1200px;
   padding: 0 15px;
   margin: 0, auto;
 }
@@ -112,6 +112,7 @@ img {
 }
 
 .page-header {
+  position: relative;
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
@@ -183,16 +184,67 @@ img {
   }
 }
 
-.header-button .icon-cross {
+.header-button .icon-menu {
   display: none;
-}
-
-.header-button.is-open .icon-cross {
-  display: block;
 }
 
 .header-button.is-open .icon-menu {
+  display: block;
+}
+
+.header-button.is-open .icon-cross {
   display: none;
+}
+
+.header-menu {
+  /*display: block;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  background-color: yellowgreen;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+.header-menu.is-open {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-menu {
+    display: none;
+  }
+}
+
+.menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: start;
+}
+
+.menu-nav__link {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: #212121;
+  text-decoration: none;
+  margin-bottom: 35px;
 }
 
 /*MENU-BUTTON-END*/
@@ -444,75 +496,69 @@ button.slogan-site__button {
 
 .benefits {
   padding-top: 94px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 480px) {
+  .benefits {
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding-bottom: 0;
+  }
 }
 
 .benefits-topic__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media screen and (min-width: 480px) {
-  .benefits-topic__list {
-    /*width: 480px;*/
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (min-width: 768px) {
-  .benefits-topic__list {
-    /* width: 768px;*/
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-preferred-size: calc(100% / 2);
-        flex-basis: calc(100% / 2);
-    /* .benefits-topic__item {
-      flex-basis: calc(100% / 2);
-    }*/
-  }
-}
-@media screen and (min-width: 1200px) {
-  .benefits-topic__list {
-    /*width: 1200px;*/
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gup));
+  margin-top: calc(-1 * var(--card-set-gup));
 }
 
 .benefits-topic__item {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0, auto;
-  width: 270px;
+  display: block;
+  margin-left: var(--card-set-gup);
+  margin-top: var(--card-set-gup);
+  /*&:not(:last-child) {
+    @extend %margin-primary;
+  }*/
 }
 @media screen and (min-width: 480px) {
-  .benefits-topic__item:nth-child(4) {
-    margin-right: 30px;
+  .benefits-topic__item {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefits-topic__item {
+    -ms-flex-preferred-size: calc(100% / 2 - var(--card-set-gup));
+        flex-basis: calc(100% / 2 - var(--card-set-gup));
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-topic__item {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 270px;
   }
 }
 
 .benefits-topic__item::before {
   content: "";
   display: block;
-  width: 270px;
+  /*width: 270px;*/
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -610,22 +656,32 @@ button.slogan-site__button {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 94px;
   padding-bottom: 94px;
   background-color: #f5f4fa;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (min-width: 480px) {
+  .command {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .command {
+    padding-top: 94px;
+  }
+}
 
 .team__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: calc(-1 * var(--card-set-gup));
+  margin-top: calc(-1 * var(--card-set-gup));
 }
 @media screen and (min-width: 480px) {
   .team__list {
-    width: 480px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -633,13 +689,10 @@ button.slogan-site__button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .team__list {
-    width: 768px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -649,13 +702,10 @@ button.slogan-site__button {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -ms-flex-preferred-size: calc(100% / 2);
-        flex-basis: calc(100% / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .team__list {
-    width: 1200px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -666,16 +716,12 @@ button.slogan-site__button {
 }
 
 .team__member {
-  margin-bottom: 30px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
-}
-@media screen and (min-width: 480px) {
-  .team__member:nth-child(4) {
-    margin-right: 30px;
-  }
+  margin-left: var(--card-set-gup);
+  margin-top: var(--card-set-gup);
 }
 
 .member-card {
@@ -759,7 +805,6 @@ button.slogan-site__button {
 
 .clients {
   max-width: 1600px;
-  /*height: 372px;*/
   margin-left: auto;
   margin-right: auto;
   padding-top: 94px;
@@ -770,44 +815,40 @@ button.slogan-site__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media screen and (min-width: 480px) {
-  .client-list__icons {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-preferred-size: calc(100% / 2);
-        flex-basis: calc(100% / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .client-list__icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gup));
+  margin-top: calc(-1 * var(--card-set-gup));
 }
 
 .client-list__icon {
-  width: 170px;
+  margin-left: var(--card-set-gup);
+  margin-top: var(--card-set-gup);
   height: 92px;
+  /*&:not(last-child) {
+    @extend %margin-primary;
+  }*/
 }
 @media screen and (min-width: 480px) {
   .client-list__icon {
-    margin-bottom: 30px;
+    -ms-flex-preferred-size: calc(100% / 2 - var(--card-set-gup));
+        flex-basis: calc(100% / 2 - var(--card-set-gup));
   }
 }
+@media screen and (min-width: 768px) {
+  .client-list__icon {
+    -ms-flex-preferred-size: calc(100% / 3 - var(--card-set-gup));
+        flex-basis: calc(100% / 3 - var(--card-set-gup));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-list__icon {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: 170px;
+  }
+}
+
 .client-logo {
   width: 100%;
   height: 100%;
@@ -1042,17 +1083,6 @@ button.slogan-site__button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .footer-contact {
-    margin-left: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer-contact {
-    margin-left: 70px;
   }
 }
 
@@ -1542,10 +1572,31 @@ button.slogan-site__button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 480px) {
+  .modal-checkbox {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-checkbox {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-checkbox {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.74;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-checkbox__input {
@@ -1565,7 +1616,6 @@ button.slogan-site__button {
 .modal-checkbox__icon {
   display: inline-block;
   margin-right: 8px;
-  margin-left: 14px;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -1577,9 +1627,6 @@ button.slogan-site__button {
 .modal-checkbox__contract {
   display: block;
   margin-left: 4px;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
   color: #2196f3;
 }
 

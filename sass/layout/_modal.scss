@@ -154,12 +154,17 @@
   position: relative;
   display: flex;
   align-items: center;
-
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-
   color: $color-text;
+
+  @media screen and (min-width: 480px) {
+    @include fontMix(12px, normal, 1.16, 0.03em);
+  }
+  @media screen and (min-width: 768px) {
+    @include fontMix(12px, normal, 1.16, 0.03em);
+  }
+  @media screen and (min-width: 1200px) {
+    @include fontMix(14px, normal, 1.74, 0.03em);
+  }
 }
 .modal-checkbox__input {
   appearance: none;
@@ -175,7 +180,6 @@
 .modal-checkbox__icon {
   display: inline-block;
   margin-right: 8px;
-  margin-left: 14px;
 
   width: 16px;
   height: 15px;
@@ -187,10 +191,6 @@
 .modal-checkbox__contract {
   display: block;
   margin-left: 4px;
-  font-size: 14px;
-  line-height: 1.714;
-
-  letter-spacing: 0.03em;
   color: $second-color;
 }
 .modal-checkbox__input:checked + .modal-checkbox__icon {

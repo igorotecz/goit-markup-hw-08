@@ -1,6 +1,5 @@
 .clients {
   max-width: 1600px;
-  /*height: 372px;*/
   margin-left: auto;
   margin-right: auto;
   padding-top: 94px;
@@ -8,30 +7,27 @@
 }
 .client-list__icons {
   display: flex;
-  @media screen and (min-width: 480px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-basis: calc(100% / 2);
-  }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gup));
+  margin-top: calc(-1 * var(--card-set-gup));
 }
 .client-list__icon {
-  width: 170px;
+  margin-left: var(--card-set-gup);
+  margin-top: var(--card-set-gup);
   height: 92px;
-  &:not(last-child) {
+
+  /*&:not(last-child) {
     @extend %margin-primary;
-  }
+  }*/
   @media screen and (min-width: 480px) {
-    margin-bottom: 30px;
+    flex-basis: calc(100% / 2 - var(--card-set-gup));
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - var(--card-set-gup));
   }
   @media screen and (min-width: 1200px) {
+    flex-basis: auto;
+    width: 170px;
   }
 }
 
