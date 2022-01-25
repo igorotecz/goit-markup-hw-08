@@ -1,6 +1,6 @@
 .projects {
   padding: 0;
-  margin: 0;
+
   display: flex;
   flex-wrap: wrap;
 
@@ -8,9 +8,16 @@
   margin-top: calc(-1 * var(--card-set-gup));
 }
 .projects > .projects__list {
-  flex-basis: calc(100% / 3 -var(--card-set-gup));
   margin-left: var(--card-set-gup);
   margin-top: var(--card-set-gup);
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - var(--card-set-gup));
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - var(--card-set-gup));
+  }
 }
 .projects__list * {
   background: $back-color;

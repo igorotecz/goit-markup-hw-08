@@ -63,23 +63,27 @@ img {
   }
 }
 
-.container {
+.container,
+.footer-container {
   /*width: 1200px;*/
   padding: 0 15px;
-  margin: 0;
+  margin: 0, auto;
 }
 @media screen and (min-width: 480px) {
-  .container {
+  .container,
+.footer-container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .container {
+  .container,
+.footer-container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container {
+  .container,
+.footer-container {
     width: 1200px;
   }
 }
@@ -449,7 +453,7 @@ button.slogan-site__button {
 }
 @media screen and (min-width: 480px) {
   .benefits-topic__list {
-    width: 480px;
+    /*width: 480px;*/
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -463,7 +467,7 @@ button.slogan-site__button {
 }
 @media screen and (min-width: 768px) {
   .benefits-topic__list {
-    width: 768px;
+    /* width: 768px;*/
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -482,7 +486,7 @@ button.slogan-site__button {
 }
 @media screen and (min-width: 1200px) {
   .benefits-topic__list {
-    width: 1200px;
+    /*width: 1200px;*/
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -510,7 +514,7 @@ button.slogan-site__button {
   display: block;
   width: 270px;
   height: 120px;
-  background-color: var(--button-secondary);
+  background-color: #f5f4fa;
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: center;
@@ -836,6 +840,8 @@ button.slogan-site__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -902,7 +908,6 @@ button.slogan-site__button {
 
 .projects {
   padding: 0;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -913,10 +918,20 @@ button.slogan-site__button {
 }
 
 .projects > .projects__list {
-  -ms-flex-preferred-size: calc(100% / 3 -var(--card-set-gup));
-      flex-basis: calc(100% / 3 -var(--card-set-gup));
   margin-left: var(--card-set-gup);
   margin-top: var(--card-set-gup);
+}
+@media screen and (min-width: 768px) {
+  .projects > .projects__list {
+    -ms-flex-preferred-size: calc(100% / 2 - var(--card-set-gup));
+        flex-basis: calc(100% / 2 - var(--card-set-gup));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects > .projects__list {
+    -ms-flex-preferred-size: calc(100% / 3 - var(--card-set-gup));
+        flex-basis: calc(100% / 3 - var(--card-set-gup));
+  }
 }
 
 .projects__list * {
@@ -996,8 +1011,9 @@ button.slogan-site__button {
 }
 
 .page-footer {
-  margin-left: auto;
-  margin-right: auto;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin: 0, auto;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
