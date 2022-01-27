@@ -15,47 +15,34 @@
 <body>
     <header class="header"> 
         <div class="page-header container">
-        <nav class="page-header__nav-bar">
-            <a class="page-header__logo" href="./index.html"><span class="page-header__web">Web</span>Studio</a>
+            <nav class="page-header__nav-bar">
+            <a class="page-header__logo" href="./index.html"><span class="page-header__web">Web</span>Studio</a></nav>
             <button type="button" 
-            class="header-button is-open" 
-            aria-expended="false" 
-            aria-controls="header-menu"
-            data-menu-button>
-                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                    <use class="icon-cross" href="./imagescvg2/sprite3.svg#icon-close_40px"></use>
-                    <use class="icon-menu" href="./imagescvg2/sprite3.svg#icon-menu_40px"></use>
-                </svg>
+                class="header-button is-open" 
+                aria-expended="false" 
+                aria-controls="header-menu"
+                data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon-cross" href="./imagescvg2/sprite3.svg#icon-close_40px"></use>
+                        <use class="icon-menu" href="./imagescvg2/sprite3.svg#icon-menu_40px"></use>
+                    </svg>
             </button>
-        </nav>
             <div class="header-menu is-open" 
                 id="header-menu" 
                 data-menu>
-                <ul class="menu-nav__list">
-                    <li class="menu-nav"><a href="./index.html" class="menu-nav__link">Студия</a></li>
-                    <li class="menu-nav"><a href="./portfolio.html" class="menu-nav__link">Портфолио</a></li>
-                    <li class="menu-nav"><a href="./contact.html" class="menu-nav__link">Контакты</a></li>
-                </ul>
-                <ul class="menu-contact">
-                    <li class="menu-contact__item"><a class="contact-header__mail" href="mailto:info@deskstudio.com">
-                           info@deskstudio.com</a></li>
-                    <li class="menu-contact__item"><a class="contact-header__tel" href="tel:+380961111111">
-                            +380961111111</a></li>
+                <ul class="navigation">
+                    <li class="navigation__menu"><a href="./index.html" class="navigation__link navigation__link--accent">Студия</a></li>
+                    <li class="navigation__menu"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
+                    <li class="navigation__menu"><a href="./contact.html" class="navigation__link">Контакты</a></li>
+                </ul>       
+            
+                <ul class="contact-header">
+                    <li class="contact-header__item"><a class="contact-header__mail" href="mailto:info@deskstudio.com">
+                    <svg class="contact-header__icon" width="16px" height="12px"><use href="./imagescvg/sprite.svg#mail"></use></svg>info@deskstudio.com</a></li>
+                    <li class="contact-header__item"><a class="contact-header__tel" href="tel:+380961111111">
+                    <svg class="contact-header__icon" width="10px" height="16px"><use href="./imagescvg/sprite.svg#smartphone"></use></svg>+380961111111</a></li>
                 </ul>
             </div>
-            <ul class="navigation">
-                <li class="navigation__menu"><a href="./index.html" class="navigation__link navigation__link--accent">Студия</a></li>
-                <li class="navigation__menu"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
-                <li class="navigation__menu"><a href="./contact.html" class="navigation__link">Контакты</a></li>
-            </ul>       
-        
-            <ul class="contact-header">
-                <li class="contact-header__item"><a class="contact-header__mail" href="mailto:info@deskstudio.com">
-                <svg class="contact-header__icon" width="16px" height="12px"><use href="./imagescvg/sprite.svg#mail"></use></svg>info@deskstudio.com</a></li>
-                <li class="contact-header__item"><a class="contact-header__tel" href="tel:+380961111111">
-                <svg class="contact-header__icon" width="10px" height="16px"><use href="./imagescvg/sprite.svg#smartphone"></use></svg>+380961111111</a></li>
-            </ul>
-            
         </div>
     </header>
     <main>
@@ -99,19 +86,25 @@
         <ul class="profail-title__list">
             <li class="profail-title__item">
                 <div class="service">
-                <img src="./images/photo1.jpg" alt="клавиатура" width="370">
+                    
+                <img srcset="./images/photo1.jpg 1x, ./images/photo1@2x.jpg 2x"
+                     src="./images/photo1.jpg" alt="клавиатура" width="370">
                 <div class="service-product"><h3 class="service-product__name">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3></div>
                 </div>
             </li>
             <li class="profail-title__item">
                 <div class="service">
-                <img src="./images/photo2.jpg" alt="смартфон" width="370">
+                    
+                <img srcset="./images/photo2.jpg 1x, ./images/photo2@2x.jpg 2x"
+                     src="./images/photo2.jpg" alt="смартфон" width="370">
                 <div class="service-product"> <h3 class="service-product__name">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3></div>
                 </div>
             </li>
             <li class="profail-title__item">
                 <div class="service">
-                 <img src="./images/photo3.jpg" alt="планшет" width="370">
+                    
+                 <img srcset="./images/photo3.jpg 1x, ./images/photo3@2x.jpg 2x"
+                       src="./images/photo3.jpg" alt="планшет" width="370">
                 <div class="service-product"><h3 class="service-product__name">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3></div>
                 </div> 
             </li>
@@ -125,7 +118,15 @@
        <h2 class="team block-titles">Наша команда</h2>
        <ul class="team__list">
         <li class="team__member">
-            <img src="./images/photoigor.jpg" alt="Igor" width="270">
+            <img srcset="
+                ./images/photoigor270.jpg    270w,
+                ./images/photoigor270@2x.jpg 540w,
+                ./images/photoigor354.jpg    354w,
+                ./images/photoigor354@2x.jpg 708w,
+                ./images/photoigor450.jpg    450w,
+                ./images/photoigor270@2x.jpg 900w
+                " src="./images/photoigor270.jpg" alt="Igor"
+                sizes="(min-width: 1200px) 38vw, (min-width: 768px) 77vw, (min-width: 480px) 154vw, 100vw" />
             <div class="member-card">
             <h3 class="member-card__name">Игорь Демьяненко</h3>
             <p class="member-card__position">Product Designer</p>
@@ -162,7 +163,15 @@
             </div>
         </li>
         <li class="team__member">
-            <img src="./images/photoolga.jpg" alt="Olga" width="270">
+            <img srcset="
+                ./images/photoolga270.jpg    270w,
+                ./images/photoolga270@2x.jpg 540w,
+                ./images/photoolga354.jpg    354w,
+                ./images/photoolga354@2x.jpg 708w,
+                ./images/photoolga450.jpg    450w,
+                ./images/photoolga270@2x.jpg 900w
+                " src="./images/photoolga270.jpg" alt="Olga"
+                sizes="(min-width: 1200px) 38vw, (min-width: 768px) 77vw, (min-width: 480px) 154vw, 100vw" />
             <div class="member-card">
             <h3 class="member-card__name">Ольга Репина</h3>
             <p class="member-card__position">Frontend Developer</p>
@@ -199,7 +208,15 @@
             </div>
         </li>
         <li class="team__member">
-            <img src="./images/photonikolay.jpg" alt="Nikolay" width="270">
+            <img srcset="
+                            ./images/photonikolay270.jpg    270w,
+                            ./images/photonikolay270@2x.jpg 540w,
+                            ./images/photonikolay354.jpg    354w,
+                            ./images/photonikolay354@2x.jpg 708w,
+                            ./images/photonikolay450.jpg    450w,
+                            ./images/photonikolay270@2x.jpg 900w
+                            " src="./images/photonikolay270.jpg" alt="Nikolay"
+                sizes="(min-width: 1200px) 38vw, (min-width: 768px) 77vw, (min-width: 480px) 154vw, 100vw" />       
             <div class="member-card">
             <h3 class="member-card__name">Николай Тарасов</h3>
             <p class="member-card__position">Marketing</p>
@@ -236,7 +253,15 @@
             </div>
         </li>
         <li class="team__member">
-            <img src="./images/photomihail.jpg" alt="Mihail" width="270">
+            <img srcset="
+                ./images/photomihail270.jpg    270w,
+                ./images/photomihail270@2x.jpg 540w,
+                ./images/photomihail354.jpg    354w,
+                ./images/photomihail354@2x.jpg 708w,
+                ./images/photomihail450.jpg    450w,
+                ./images/photomihail270@2x.jpg 900w
+                " src="./images/photomihail270.jpg" alt="Mihail"
+                sizes="(min-width: 1200px) 38vw, (min-width: 768px) 77vw, (min-width: 480px) 154vw, 100vw" />
             <div class="member-card">
             <h3 class="member-card__name">Михаил Ермаков</h3>
             <p class="member-card__position">UI Designer</p>
