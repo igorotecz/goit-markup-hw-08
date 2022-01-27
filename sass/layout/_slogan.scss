@@ -1,19 +1,157 @@
-.slogan {
-  height: 600px;
-  max-width: 1600px;
+/*.slogan {
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2f303a;}*/
+
+/*background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/Img_hero_v_2.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+    url(../images/Img_hero.jpg);*/
 
-  padding: 200px 0;
-  background-color: #2f303a;
+/*@media screen and (min-width: 480px) {
+    height: 400px;
+    max-width: 480px;
+    padding: 118px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/Img_hero_tel.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    height: 400px;
+    max-width: 768px;
+    padding: 118px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/Img_hero_tablet.jpg);
+  }
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+    max-width: 1600px;
+    padding: 200px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/Img_hero.jpg");
+  }*/
+/*@media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .slogan {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/img_hero@2x.jpg");
+    }
+  }*/
+
+@media screen and (min-width: 480px) {
+  .slogan {
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2f303a;
+    height: 400px;
+    max-width: 480px;
+    padding: 118px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/img_hero_tel.jpg");
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .slogan {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/img_hero_tel@2x.jpg");
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .slogan {
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2f303a;
+    height: 400px;
+    max-width: 768px;
+    padding: 118px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/img_hero_tablet.jpg");
+  }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .slogan {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/img_hero_tablet@2x.jpg");
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .slogan {
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2f303a;
+    height: 600px;
+    max-width: 1600px;
+    padding: 200px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/img_hero.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .slogan {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/img_hero@2x.jpg");
+    }
+  }
 }
 
 .slogan-site__text {
