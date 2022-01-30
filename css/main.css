@@ -69,7 +69,7 @@ img {
   padding: 0 15px;
   margin: 0 auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .container,
 .footer-container {
     width: 480px;
@@ -513,64 +513,6 @@ img {
   margin-right: 20px;
 }
 
-/*.slogan {
-  margin-left: auto;
-  margin-right: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #2f303a;}*/
-/*background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/Img_hero.jpg);*/
-/*@media screen and (min-width: 480px) {
-    height: 400px;
-    max-width: 480px;
-    padding: 118px 0;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/Img_hero_tel.jpg);
-  }
-  @media screen and (min-width: 768px) {
-    height: 400px;
-    max-width: 768px;
-    padding: 118px 0;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/Img_hero_tablet.jpg);
-  }
-  @media screen and (min-width: 1200px) {
-    height: 600px;
-    max-width: 1600px;
-    padding: 200px 0;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url("../images/Img_hero.jpg");
-  }*/
-/*@media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .slogan {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../images/img_hero@2x.jpg");
-    }
-  }*/
 @media screen and (min-width: 480px) {
   .slogan {
     margin-left: auto;
@@ -683,10 +625,6 @@ button.slogan-site__button {
   font-weight: bold;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  /*font-size: 16px;
-   font-weight: bold;
-   line-height: 1.87;
-   letter-spacing: 0.06em;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
